@@ -2,6 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license, color) {
   var bColor;
+  var licenseID;
 
   switch (color) {
     case 'red': bColor = 'red'
@@ -31,10 +32,40 @@ function renderLicenseBadge(license, color) {
 
   }
 
+  switch (license) {
+    case 'GNU AGPLv3': licenseID = 'agpl-3.0';
+      break;
+
+    case 'GNU GPLv3': licenseID = 'gpl-3.0';
+      break;
+
+    case 'GNU LGPLv3': licenseID = 'lgpl-3.0';
+      break;
+
+    case 'Mozilla Public License 2.0': licenseID = 'mpl-2.0';
+      break;
+
+    case 'Apache License 2.0': licenseID = 'apache-2.0';
+      break;
+
+    case 'MIT License': licenseID = 'mit';
+      break;
+
+    case 'Boost Software License 1.0': licenseID = 'bsl-1.0';
+      break;
+
+    case 'The Unlicense': licenseID = 'unlicense';
+      break;
+
+    case 'No License': licenseID = '';
+      break;
+
+  }
+
   if (license == 'No License') {
     return "";
   } else {
-    return `https://img.shields.io/static/v1?label=license&message=${license}&color=${bColor})`;
+    return `![Badge](https://img.shields.io/static/v1?label=license&message=${licenseID}&color=${bColor})`;
   }
 }
 
@@ -90,24 +121,33 @@ function renderLicenseSection(license, color) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title} 
-  
+
   ## Description
+
+  ${data.description}
 
   ## Table of Contents
 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
   ## Installation
 
-
-
-
-
-
+  ${data.installation}
 
   ## Usage
 
+  ${data.usage}
+
   ## Credits
 
+  ${data.credits}
+
   ## License
+
+  ${renderLicenseSection(data.license, data.badgeColor)}
 
 `;
 }

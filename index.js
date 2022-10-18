@@ -88,28 +88,48 @@ const questions = [
 
 
 ];
+var testinputs = {
+	title: "WRITEMYREADME",
+	github: "themanamana",
+	email: "allentrobson@gmail.com",
+	description: "This project will create a custom readme file by prompting a user with several questions using inquirer",
+	installation: "Install inquirer using npm",
+	usage: "Use node.js to open the index.js file",
+	credits: "Google",
+	license: "Mozilla Public License 2.0",
+	badgeColor: "purple",
+	contribution: "Send me all of your money"
+}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(`${fileName}-README.md`, generateMarkdown(data), (err) =>
+function writeToFile(testinputs) {
+    fs.writeFile(`WriteMy-README.md`, generateMarkdown(testinputs), (err) =>
         err ? console.error(err) : console.log('Success!')
     );
 }
 
+writeToFile(testinputs);
+
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) {
+//     fs.writeFile(`${fileName}-README.md`, generateMarkdown(data), (err) =>
+//         err ? console.error(err) : console.log('Success!')
+//     );
+// }
+
 // TODO: Create a function to initialize app
-function init() {
-    inquirer
-    .prompt(questions)
-    .then((data) => {
-        const filename = `${data.title.toLowerCase().split(' ').join('')}`;
+// function init() {
+//     inquirer
+//     .prompt(questions)
+//     .then((data) => {
+//         const filename = `${data.title.toLowerCase().split(' ').join('')}`;
 
         
-        writeToFile(filename,data);
-    });
- }
+//         writeToFile(filename,data);
+//     });
+//  }
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
 
 
 
