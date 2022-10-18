@@ -3,7 +3,7 @@
 function renderLicenseBadge(license, color) {
   var bColor;
 
-  switch (license) {
+  switch (color) {
     case 'red': bColor = 'red'
       break;
 
@@ -67,7 +67,7 @@ function renderLicenseLink(license) {
 
     case 'The Unlicense': urlAdd = 'unlicense';
       break;
-      
+
     case 'No License': urlAdd = '';
       break;
 
@@ -89,7 +89,25 @@ function renderLicenseSection(license, color) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.title} 
+  
+  ## Description
+
+  ## Table of Contents
+
+  ## Installation
+
+
+
+
+
+
+
+  ## Usage
+
+  ## Credits
+
+  ## License
 
 `;
 }

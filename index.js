@@ -11,7 +11,7 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 const questions = [
     {
         type: 'input',
-        name: 'projectTitle',
+        name: 'title',
         message: 'What is the title of your project?',
         validate: function (input) {
             if (input.length < 1) {
@@ -91,7 +91,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(`README1.md`, JSON.stringify(data, null, '\t'), (err) =>
+    fs.writeFile(`${fileName}-README.md`, generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log('Success!')
     );
 }
@@ -101,7 +101,7 @@ function init() {
     inquirer
     .prompt(questions)
     .then((data) => {
-        const filename = `${data.projectTitle.toLowerCase().split(' ').join('')}.json`;
+        const filename = `${data.title.toLowerCase().split(' ').join('')}`;
 
         
         writeToFile(filename,data);
