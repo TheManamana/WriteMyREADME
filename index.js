@@ -3,6 +3,8 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 
+const generateMarkdown = require('./utils/generateMarkdown.js');
+
 
 
 // TODO: Create an array of questions for user input
@@ -65,7 +67,14 @@ const questions = [
         type: 'list',
         name: 'license',
         message: "What license would you like to use for your project?",
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense', 'No License'],
+        
+    },
+    {
+        type: 'list',
+        name: 'badgeColor',
+        message: "What color would you like your license badge to be?",
+        choices: ['red','blue','orange','yellow','green','light green','pink','purple'],
         
     },
     {
