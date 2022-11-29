@@ -114,40 +114,51 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license, color) {
 
-  var licenseInfo = `${renderLicenseBadge(license, color)} ${renderLicenseLink(license)}`
+  var licenseInfo = `${renderLicenseBadge(license, color)} \n
+  This is licensed under ${license}. Information about this license can be found at ${renderLicenseLink(license)}`
   return licenseInfo;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title} 
+  return `# ${data.title}
+  ${renderLicenseBadge(data.license, data.badgeColor)}
+  
 
-  ## Description
 
-  ${data.description}
+## Description
 
-  ## Table of Contents
+${data.description}
+
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Questions](#questions)
 
-  ## Installation
+## Installation
 
-  ${data.installation}
+${data.installation}
 
-  ## Usage
+## Usage
 
-  ${data.usage}
+${data.usage}
 
-  ## Credits
+## Credits
 
-  ${data.credits}
+${data.credits}
 
-  ## License
+## License
 
-  ${renderLicenseSection(data.license, data.badgeColor)}
+${renderLicenseSection(data.license, data.badgeColor)}
+
+## Questions 
+
+Send me questions at: ${data.email}
+
+My Github: https://github.com/${data.github}/
 
 `;
 }
