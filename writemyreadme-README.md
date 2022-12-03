@@ -5,7 +5,7 @@
 
 ## Description
 
-This app uses a serious of prompts to generate a readme file for code projects.
+This app uses a series of prompts to generate a readme file for coding projects.
 
 ## Table of Contents
 
@@ -17,11 +17,11 @@ This app uses a serious of prompts to generate a readme file for code projects.
 
 ## Installation
 
-Use NPM install and then run index.js using node.
+Use NPM install in your terminal and then run index.js using node.
 
 ## Usage
 
-
+Just follow the prompts!
 
 ## Credits
 
@@ -38,4 +38,6 @@ Stack Overflow
 Send me questions at: AllenTRobson@gmail.com
 
 My Github: https://github.com/TheManamana/
+
+Video Tutorial on using app: https://watch.screencastify.com/v/7NLiesn3YiNvgDQrhC26
 
