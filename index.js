@@ -59,6 +59,14 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'tests',
+        message: 'How can your code tests be run?',
+        
+    
+
+    },
+    {
+        type: 'input',
         name: 'credits',
         message: 'What credits are due to others?',
         

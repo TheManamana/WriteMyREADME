@@ -146,6 +146,10 @@ ${data.installation}
 
 ${data.usage}
 
+## Testing
+
+${data.tests}
+
 ## Credits
 
 ${data.credits}
