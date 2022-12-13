@@ -23,6 +23,8 @@ Use NPM install in your terminal and then run index.js using node.
 
 Just follow the prompts!
 
+Video Tutorial on using app: https://watch.screencastify.com/v/QcZjLNBsb7j6bk5A9bl3
+
 ## Testing
 
 There were no tests created for this particular project.
@@ -43,5 +45,5 @@ Send me questions at: AllenTRobson@gmail.com
 
 My Github: https://github.com/TheManamana/
 
-Video Tutorial on using app: https://watch.screencastify.com/v/QcZjLNBsb7j6bk5A9bl3
+
 
