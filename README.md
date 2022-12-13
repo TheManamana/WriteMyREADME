@@ -11,6 +11,7 @@ This app uses a series of command line prompts to generate a readme file for cod
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Testing](#testing)
 - [Credits](#credits)
 - [License](#license)
 - [Questions](#questions)

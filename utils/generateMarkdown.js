@@ -134,6 +134,7 @@ ${data.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Testing](#testing)
 - [Credits](#credits)
 - [License](#license)
 - [Questions](#questions)
